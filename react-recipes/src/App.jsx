@@ -1,9 +1,9 @@
 import React from 'react';
-
-// import RecipeTitle from './RecipeTitle'
+import './index.css'
+import RecipeTitle from './RecipeTitle'
 // TODO: Import IngredientList
 // import IngredientList from './IngredientList'
-// import IngredientListNumeric from './IngredientListNumeric'
+import IngredientListNumeric from './IngredientListNumeric'
 
 function App() {
     // TODO: Add recipe object
@@ -25,10 +25,10 @@ function App() {
         <article>
             <h1>Recipe Manager</h1>
             {/* TODO: Add RecipeTitle component */}
-            {/* <RecipeTitle title={ recipe.title } feedback={ recipe.feedback } /> */}
+            <RecipeTitle title={ recipe.title } feedback={ recipe.feedback } />
             {/* TODO: Add IngredientList component */}
             {/* <IngredientList ingredients={recipe.ingredients} /> */}
-            {/* <IngredientListNumeric ingredients={recipe.ingredients} /> */}
+            <IngredientListNumeric ingredients={recipe.ingredients} />
         </article>
     )
 }
