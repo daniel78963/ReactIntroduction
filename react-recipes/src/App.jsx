@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css'
 import RecipeTitle from './RecipeTitle'
 // TODO: Import IngredientList
@@ -7,7 +8,8 @@ import IngredientListNumeric from './IngredientListNumeric'
 
 function App() {
     // TODO: Add recipe object
-    const recipe = {
+    // const recipe = {
+        const initialRecipe = {        
         title: 'Mashed potatoes',
         feedback: {
             rating: 4.8,
@@ -21,14 +23,29 @@ function App() {
             { name: 'Pepper', prepared: true },
         ],
     };
+
+     // TODO: Create recipe state
+     const [ recipe, setRecipe ] = useState(initialRecipe);
+     // TODO: Add new state property
+ 
+     // TODO: Create ingredientClick event listener
+ 
+     // TODO: Add the effect hook
+ 
     return (
         <article>
             <h1>Recipe Manager</h1>
             {/* TODO: Add RecipeTitle component */}
-            <RecipeTitle title={ recipe.title } feedback={ recipe.feedback } />
+            {/* <RecipeTitle title={ recipe.title } feedback={ recipe.feedback } /> */}
             {/* TODO: Add IngredientList component */}
             {/* <IngredientList ingredients={recipe.ingredients} /> */}
-            <IngredientListNumeric ingredients={recipe.ingredients} />
+            {/* <IngredientListNumeric ingredients={recipe.ingredients} /> */}
+
+             {/* TODO: Pass recipe metadata to RecipeTitle */}
+            <RecipeTitle title={recipe.title} feedback={recipe.feedback} />
+            {/* TODO: Pass ingredients and event listener to IngredientList */}
+
+            {/* TODO: Add the prep work display */}
         </article>
     )
 }
