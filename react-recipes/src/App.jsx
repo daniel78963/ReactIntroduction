@@ -48,7 +48,7 @@ function App() {
              {/* TODO: Pass recipe metadata to RecipeTitle */}
             <RecipeTitle title={recipe.title} feedback={recipe.feedback} />
             {/* TODO: Pass ingredients and event listener to IngredientList */}
-
+            <IngredientListNumeric ingredients={recipe.ingredients} onClick={ ingredientClick } />
             {/* TODO: Add the prep work display */}
         </article>
     )
