@@ -38,6 +38,11 @@ function App() {
      useEffect(() => {
         setPrepared(recipe.ingredients.every(i => i.prepared));
     }, [recipe]);
+
+    // El código usa setPrepared para actualizar prepared. Usa el método every, que devuelve un valor booleano basado en cada elemento que coincida con los criterios especificados. En nuestro caso, vamos a comprobar si todos los elementos están preparados. En caso contrario, el método devuelve false.
+
+    // El segundo parámetro en useEffect está establecido en [recipe]. Esta configuración proporciona la dependencia para asegurarse de que nuestro código se ejecuta solo cuando el objeto recipe cambia.
+
     return (
         <article>
             <h1>Recipe Manager</h1>
